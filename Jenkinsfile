@@ -38,11 +38,9 @@ pipeline {
     }
   }
   post {
-    always {
+    success {
       script {
-          if (result<'35'){
-            telegramSend(message: "Hi Nikos, Your intenet connection is \"${result}\" Mbps.")
-          }
+        telegramSend(message: "Hi Nikos, Your video is ready on '/home/pi/Videos/FFMPEG' path")
         }
       }
     }
