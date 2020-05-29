@@ -22,11 +22,11 @@ pipeline {
       //cleanWs()
       checkout scm
         script {
-          if (params.File_Path != null){
-            if (params.File_Path != null){
+          //if (params.File_Path != null){
+           // if (params.File_Path != null){
               sh "sudo ffmpeg -i ${params.File_Path} /home/pi/Videos/FFMPEG/${params.File_Name}${params.File_Type}"
-            }
-          }
+            //}
+          //}
         }
       }
       post {
